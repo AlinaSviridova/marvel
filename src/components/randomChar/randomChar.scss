@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(2, 50%);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    align-items: center;
     &__block {
         padding: 40px 35px;
         display: grid;
@@ -13,7 +14,10 @@
     &__img {
         width: 180px;
         height: 180px;
-        object-fit: cover;
+        object-fit: cover; 
+    } 
+    &__contain{
+        object-fit: contain; 
     }
     &__info {
         display: grid;
@@ -30,6 +34,11 @@
     &__descr {
         font-size: 14px;
         line-height: 18px;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &__btns {
         a:nth-child(1) {
